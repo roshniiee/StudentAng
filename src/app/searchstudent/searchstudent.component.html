@@ -1,0 +1,16 @@
+<h2>SearchStudent</h2>
+ 
+<form #searchForm="ngForm" (ngSubmit)="search(searchForm.value)">
+ Id: <input type="text" [(ngModel)]="this.id" name="id" ngModel>
+<input type="submit" value="Search">
+</form>
+ 
+<table border="1">
+<tr>
+<th>Id</th> <th>Name</th>
+</tr>
+<tr *ngFor="let ss of Stud">
+<td>{{ss.id}}</td>
+<td>{{ss.name}}</td>
+</tr>
+</table>
